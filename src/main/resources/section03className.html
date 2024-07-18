@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Tree By.className() Examples</title>
+</head>
+<body>
+<img class="element_class" src="image1.png" alt="Image 1">
+<img class="element_class" src="image2.png" alt="Image 2">
+<div class="element_class">
+    <p>Text inside a div with class 'element_class'</p>
+</div>
+<button class="button_class">Click me</button>
+<div class="dynamic_class" style="display:none;">Dynamic Content</div>
+
+<script>
+    document.getElementsByClassName("button_class")[0].onclick = function() {
+        document.getElementsByClassName("dynamic_class")[0].style.display = "block";
+    };
+</script>
+</body>
+</html>

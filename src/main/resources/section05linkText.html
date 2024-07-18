@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Tree By.linkText() Examples</title>
+</head>
+<body>
+<div>
+    <a href="#">text</a>
+    <a href="#">Another text</a>
+</div>
+<a href="#" id="dynamic_link" style="display:none;">Dynamic Link</a>
+<button>Show Link</button>
+
+<script>
+    document.querySelector("button").onclick = function() {
+        document.getElementById("dynamic_link").style.display = "block";
+    };
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Tree By.tagName() Examples</title>
+</head>
+<body>
+<div>
+    <a class="logo" href="#">Logo Link</a>
+    <a class="support" href="#">Support Link</a>
+</div>
+<button>Click me</button>
+<p>Paragraph text</p>
+<span>Span text</span>
+<div class="dynamic_content" style="display:none;">Dynamic Content</div>
+
+<script>
+    document.querySelector("button").onclick = function() {
+        document.querySelector(".dynamic_content").style.display = "block";
+    };
+</script>
+</body>
+</html>

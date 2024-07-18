@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Tree By.name() Examples</title>
+</head>
+<body>
+<div name="element_name">
+    <p>some content</p>
+</div>
+<div name="shared_name">
+    <p>shared content 1</p>
+</div>
+<div name="shared_name">
+    <p>shared content 2</p>
+</div>
+<input type="text" name="username" value="testuser">
+<button name="submit_button">Submit</button>
+<div name="dynamic_name" style="display:none;">Dynamic Content</div>
+<div name="result_name" style="display:none;">Result Content</div>
+
+<script>
+    document.getElementsByName("submit_button")[0].onclick = function() {
+        document.getElementsByName("dynamic_name")[0].style.display = "block";
+        setTimeout(function() {
+            document.getElementsByName("result_name")[0].style.display = "block";
+        }, 2000);
+    };
+</script>
+</body>
+</html>

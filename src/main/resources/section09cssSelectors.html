@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Tree CSS Selectors Examples</title>
+</head>
+<body>
+<div class="main">
+    <form>
+        <input id="username" class="classname" type="text" value="User123">
+        <input class="classname" type="password">
+    </form>
+</div>
+<div class="secondary">
+    <a href="#" class="link">Click me</a>
+</div>
+<img src="previous.png" alt="Previous">
+<header id="page-header">Header</header>
+<div class="dynamic-content" style="display:none;">Dynamic Content</div>
+<button class="button-class">Show Dynamic Content</button>
+
+<script>
+    document.querySelector(".button-class").onclick = function() {
+        document.querySelector(".dynamic-content").style.display = "block";
+    };
+</script>
+</body>
+</html>

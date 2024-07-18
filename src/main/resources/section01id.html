@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Tree By.id() Examples</title>
+</head>
+<body>
+<div id="element_id">
+    <p>some content</p>
+</div>
+<div id="shared_id">
+    <p>shared content 1</p>
+</div>
+<div id="shared_id">
+    <p>shared content 2</p>
+</div>
+<button id="button_id">Click me</button>
+<div id="new_element_id" style="display:none;">New Element Content</div>
+<div id="dynamic_element_id">Dynamic Element</div>
+<div id="result_element_id" style="display:none;">Result Content</div>
+
+<script>
+    document.getElementById("button_id").onclick = function() {
+        document.getElementById("new_element_id").style.display = "block";
+    };
+
+    setTimeout(function() {
+        document.getElementById("result_element_id").style.display = "block";
+    }, 2000);
+</script>
+</body>
+</html>

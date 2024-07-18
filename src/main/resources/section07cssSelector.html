@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Tree By.cssSelector() Examples</title>
+</head>
+<body>
+<div class="main">
+    <p>text</p>
+    <p>Another text</p>
+</div>
+<div class="secondary">
+    <span class="highlight">Highlighted text</span>
+</div>
+<button class="button-class">Click me</button>
+<div class="dynamic-content" style="display:none;">Dynamic Content</div>
+
+<script>
+    document.querySelector(".button-class").onclick = function() {
+        document.querySelector(".dynamic-content").style.display = "block";
+    };
+</script>
+</body>
+</html>
